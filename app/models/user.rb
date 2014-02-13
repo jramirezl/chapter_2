@@ -1,8 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessible :email, :name
-
-
   belongs_to :user
+  has_many :microposts
 
-  validates :content, :length => { :maximum => 140 }
 end
