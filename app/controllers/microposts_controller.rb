@@ -2,11 +2,14 @@ class MicropostsController < ApplicationController
   # GET /microposts
   # GET /microposts.json
   def index
+    debugger
     @microposts = Micropost.all
-
+    debugger
     respond_to do |format|
       format.html # index.html.erb
+      debugger
       format.json { render json: @microposts }
+
     end
   end
 
